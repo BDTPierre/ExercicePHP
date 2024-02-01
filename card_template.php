@@ -33,11 +33,33 @@ function division ($nb1, $nb2) {
 
 // 3-Créez une fonction incrementer qui utilise une variable globale pour stocker et afficher le nombre d'appels à la fonction.
 
+function incrementer() {
+    global $incrementer;  // Utilisation de la variable globale
+    $incrementer++;
+    echo "Nombre d'appels à la fonction : $incrementer <br>";
+}
 
 // 4-Créez une fonction salutation qui prend en paramètre un nom et affiche "Bonjour, [nom] !" par défaut si aucun nom n'est fourni.
+
+function salut($nom = null) {
+    if ($nom === null) {
+        $nom = "Nom";
+    }
+    echo "Bonjour, $nom !";
+}
+
+function salutation($nom = null) {
+    echo 'Bonjour, ' . (empty($nom) ? "nom" : $nom) . '!';
+}
 
 // 5-Définissez une fonction division qui prend deux paramètres et renvoie le résultat de la division. 
 //     -Si le dénominateur est zéro, la fonction doit renvoyer "zero n'est pas divisible"
 
-
+function division1($nb1, $nb2) {
+    if ($nb2 != 0) {
+        return $nb1 / $nb2;
+    } else {
+        return "Le dénominateur ne peut pas être zéro, la division n'est pas possible.";
+    }
+}
 
