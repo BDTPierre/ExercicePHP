@@ -21,3 +21,7 @@ foreach ($cars as $new) {
 foreach ($cars as $new):
     echo template($new);
 endforeach;
+
+echo presentation("Pierre", "33", "Marseille"); 
+echo addition("6", "6");
+echo division("9", "3");
