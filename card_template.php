@@ -22,14 +22,19 @@ function presentation($prenom, $age, $ville) {
 // 1-Créez une fonction addition qui prend deux paramètres et (renvoie) affiche leur somme.
 
 function addition ($nb1, $nb2) {
-    echo $nb1+$nb2;
+    return $nb1+$nb2;
 };
 
 // 2-Élaborez une fonction calcul qui prend deux nombres et renvoie à la fois leur somme, leur différence, et leur produit.
 
-function division ($nb1, $nb2) {
-    echo $nb1/$nb2;
-};
+function calcul($a, $b) {  
+    $somme = $a + $b;
+    $sous = $a - $b;
+    $mult = $a * $b;
+    $result = [$somme, $sous, $mult];
+
+    return $result;
+}
 
 // 3-Créez une fonction incrementer qui utilise une variable globale pour stocker et afficher le nombre d'appels à la fonction.
 
