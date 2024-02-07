@@ -1,6 +1,6 @@
 <?php
 require("card_template.php");
-
+require("style.css");
 
 for ($i=0; $i < count($cars); $i++) {
     echo "Model : " . $cars[$i]["model"] . "<br>"; 
@@ -24,7 +24,7 @@ endforeach;
 
 echo presentation("Pierre", "33", "Marseille"); 
 echo addition("6", "6");
-echo calcul("9", "3");
+echo calcul('8','8');
 echo incrementer();
 echo incrementer();
 echo incrementer();
@@ -36,3 +36,8 @@ echo salutation("Marina");
 echo salutation();
 echo division1("10","2");
 echo division1("8","0");
+
+
+foreach ($autos as $auto):
+    echo '<div class=template>' . template2($auto) . '</div>';
+endforeach;

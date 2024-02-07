@@ -12,6 +12,17 @@ function template($new) {
         Pierre';
 };
 
+function template2 ($auto) {
+    return 
+    '<article>
+    <h2>Model :' . $auto["model"] . ' !</h2>
+    <a href="detail.php?id='.$auto['id'].'">
+        <img width="80" src="'.$auto['image'].'" alt="logo">
+    </a>
+    </article>';
+};
+
+
 function presentation($prenom, $age, $ville) {
     return 
        '<p> Je m\'appelle ' . $prenom . ', ' . 'j\'ai ' . $age . 'ans et je viens de ' . $ville . '.</p>';
@@ -34,7 +45,7 @@ function calcul($a, $b) {
     $result = [$somme, $sous, $mult];
 
     return $result;
-}
+};
 
 // 3-Créez une fonction incrementer qui utilise une variable globale pour stocker et afficher le nombre d'appels à la fonction.
 
@@ -42,7 +53,7 @@ function incrementer() {
     global $incrementer;  // Utilisation de la variable globale
     $incrementer++;
     echo "Nombre d'appels à la fonction : $incrementer <br>";
-}
+};
 
 // 4-Créez une fonction salutation qui prend en paramètre un nom et affiche "Bonjour, [nom] !" par défaut si aucun nom n'est fourni.
 
